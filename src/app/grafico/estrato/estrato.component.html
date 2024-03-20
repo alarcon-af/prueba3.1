@@ -1,0 +1,6 @@
+<div *ngIf="auth.isAuthenticated$ | async as isAuthenticated">
+    <div *ngIf="isAuthenticated">
+        <canvas id="canvas1">{{ chart }}</canvas>
+        <canvas id="canvas2">{{ chart }}</canvas>
+    </div>
+<div> 

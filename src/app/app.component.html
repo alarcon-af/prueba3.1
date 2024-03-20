@@ -1,6 +1,15 @@
-<app-auth-button></app-auth-button>
-<div *ngIf="auth.isAuthenticated$ | async as isAuthenticated">
-  <div *ngIf="isAuthenticated">
-    <canvas id="canvas">{{ chart }}</canvas>
-  </div>
-</div>
+<div>
+  <nav>
+   <ul>
+    <li><app-auth-button></app-auth-button></li>
+    <li routerLinkActive="menuSelected"><a [routerLink]="['/home']">Inicio</a></li>
+    <li routerLinkActive="menuSelected"><a [routerLink]="['/graficos/edad']">Edad</a></li>
+    <li routerLinkActive="menuSelected"><a [routerLink]="['/graficos/sangre']">Tipo Sangre</a></li>
+    <li routerLinkActive="menuSelected"><a [routerLink]="['/graficos/estrato']">Estrato</a></li>
+    <li routerLinkActive="menuSelected"><a [routerLink]="['/graficos/localidad']">Localidad</a></li>
+    <li routerLinkActive="menuSelected"><a [routerLink]="['/graficos/sexo']">Sexo</a></li>
+    <li routerLinkActive="menuSelected"><a [routerLink]="['/graficos/grupo']">Grupo Poblacional</a></li>
+   </ul>
+  </nav>
+   <router-outlet></router-outlet>
+ </div>
